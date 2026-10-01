@@ -1,0 +1,51 @@
+input[type="range"] {
+    /* filter: grayscale(1); */
+    /* -webkit-appearance: none; */
+    writing-mode: vertical-lr;
+    direction: rtl;
+    margin: 10px;
+    /* accent-color: blue; */
+    
+}
+
+.blue {
+    accent-color: blue ;
+    
+}
+
+.red {
+    accent-color: red;
+    
+}
+
+/* .curseur label,
+.curseur input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+} */
+
+.divCurseur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.blocCurseurs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* width: 80%; */
+    /* margin: auto; */
+}
+
+
+.cercle {
+    background:blue;
+    border-radius:50%;
+    width:30px;
+    height:30px;
+    border:2px solid blue;
+}
