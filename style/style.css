@@ -22,6 +22,7 @@ input[type="range"] {
 H1 {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .ligneBoutons {
