@@ -65,14 +65,29 @@ button {
 
 #debut {
     width: 100%;
-    max-width: 70%;
+    max-width: 30%;
     height: auto;
 }
 
 #couloir {
     width: 100%;
+    max-width: 40%;
+    height: auto;
+}
+
+@media all and (orientation: portrait) {
+    #debut {
+        width: 100%;
+        max-width: 70%;
+        height: auto;
+    }
+
+    #couloir {
+    width: 100%;
     max-width: 90%;
     height: auto;
+    }
+
 }
 
 
