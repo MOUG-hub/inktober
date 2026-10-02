@@ -1,0 +1,68 @@
+Titre> Énigme du 01 Octobre 2026 : La Croissance de la Pomme
+(2026-10-01- La Croissance de la Pomme)
+
+4 boutons directionnels (haut, bas, droite, gauche). 1 différent d'une fois à l'autre, s'allume en vert ou en rouge :
+si c'est vert : il faut appuyer sur ce bouton
+si c'est rouge : il faut appuyer sur l'opposé (Gauche <> Droite, Haut <> Bas)
+
+Une image de la croissance d'une Pomme change pour montrer que ça fonctionne, et revient au début en cas de faute.
+
+0 : branche vide (ou fleurs) ;
+1 : bourgeon
+2 : pomme verte
+3 : pomme rouge
+4 : pomme mangée, avec écrit Bravo. De plus, les flèches ne s'allument plus (voir se bloque), et un bouton "recommencer"
+
+
+__
+HTML:
+
+Titre : 
+Image, dont on changera la src en js
+div "blocBoutons", avec une class permettant de positionner le bloc
+4 <button>, avec une class différente permettant de les différencier en CSS
+<button> Recommencer, non visible au début
+
+__
+CSS:
+
+class titre : mise en page et positionnement
+class image : mise en page et positionnement (src géré en js)
+class blocBoutons : mise en page et positionnement
+class buttonGauche, buttonDroit, buttonHaut, buttonBas : mise en page et positionnement (couleur background géré en js)
+class recommencer : mise en page et positionnement
+
+
+__
+JavaScript:
+(la gestion de l'énigme)
+
+Compteur "Croissance" pour savoir à quelle étape de la croissance on se situe : utile pour connaître la couleur du Bouton, et l'image à afficher
+Il s'incrémente quand le bon bouton est appuyé, et revient à 0 en cas de faute.
+
+Alternance vert-rouge-vert-rouge, gérer en fonction de la Croissance
+
+fonction pour choisir aléatoirement laquelle des 4 flèches sera allumée, avec un garde fou pour que ça ne puisse pas être deux la même à la suite.
+donne> boutonAllume = (btnGauche, btnDroit, btnHaut, btnBas)
+
+fonction : incrémenter Croissance, ou retour à Croissance = 0 en fonction du bouton appuyé. Nouveau choix aléatoire.
+si couleur == vert, si boutonAppui (regarder la class du bouton appuyé) = boutonAllume {
+Croissance =+ 1;
+}
+sinon {Croissance == 0}
+
+si couleur == rouge, si boutonAppui = boutonOppose {
+Croissance =+ 1;
+}
+sinon {Croissance == 0}
+
+(définir boutonOppose:
+si boutonAllume == btnGauche {boutonOppose = btnDroit}
+si boutonAllume == btnDroit {boutonOppose = btnGauche}
+si boutonAllume == btnHaut {boutonOppose = btnBas}
+si boutonAllume == btnBas {boutonOppose = btnHaut}
+
+
+Définir la fin (si Croissance = 4), et le fait de recommencer (Croissance == 0)
+
+
