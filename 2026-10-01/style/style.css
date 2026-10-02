@@ -55,6 +55,10 @@ button {
     display: none;
 }
 
+#image {
+    width: 40%;
+    height: auto;
+}
 
 .red {
     accent-color: red;
