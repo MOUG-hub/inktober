@@ -64,12 +64,14 @@ button {
 }
 
 #debut {
-    width: 50%;
+    width: 100%;
+    max-width: 70%;
     height: auto;
 }
 
 #couloir {
-    width: 60%;
+    width: 100%;
+    max-width: 90%;
     height: auto;
 }
 
