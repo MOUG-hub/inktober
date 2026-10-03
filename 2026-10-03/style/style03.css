@@ -1,0 +1,52 @@
+button {
+    font-size: 3em;
+    color: black;
+    background-color: lightgrey ;
+    margin: 0.5em;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.recommencer {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    display: none;
+}
+
+img {
+    width: 100%;
+    max-width: 5%;
+    height: auto;
+    transform: rotate(0deg);
+}
+
+.grille {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fourmisFin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (orientation: portrait) {
+    img {
+        width: 100%;
+        max-width: 15%;
+        height: auto;
+        transform: rotate(0deg);
+    }
+
+}
