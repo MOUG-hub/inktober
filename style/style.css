@@ -28,6 +28,7 @@ H1 {
 .ligneBoutons {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .bouton {
