@@ -1,0 +1,136 @@
+button {
+    font-size: 3em;
+    color: black;
+    background-color: lightgrey ;
+    margin: 0.5em;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.recommencer {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    display: none;
+}
+
+.cactusFull {
+    position: relative; /* Sert de repère pour l'enfant en position absolue */
+    display: inline-block;
+}
+
+.cactus {
+    display: block;
+    max-width: 100%;
+}
+
+#cactusFruit0 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 0%;             /* Ajustez selon l'emplacement souhaité */
+    left: 50%;
+    transform: rotate(20deg)
+
+}
+
+#cactusFruit1 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 10%;             /* Ajustez selon l'emplacement souhaité */
+    left: 70%;
+    transform: rotate(-20deg);
+}
+
+#cactusFruit2 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 23%;             /* Ajustez selon l'emplacement souhaité */
+    left: 3%;
+    transform: rotate(-33deg)
+}
+
+#cactusFruit3 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 45%;             /* Ajustez selon l'emplacement souhaité */
+    left: 35%;
+    transform: rotate(37deg)
+}
+
+#cactusFruit4 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 65%;             /* Ajustez selon l'emplacement souhaité */
+    left: 55%;
+    transform: rotate(50deg)
+}
+
+@keyframes wizzEffect {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-10px, 5px); }
+  40% { transform: translate(10px, -5px); }
+  60% { transform: translate(-10px, -5px); }
+  80% { transform: translate(10px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.wizz {
+  animation: wizzEffect 0.3s ease-in-out;
+}
+
+
+/* img {
+    width: 100%;
+    max-width: 5%;
+    height: auto;
+    transform: rotate(0deg);
+} */
+
+
+@media all and (orientation: portrait) {
+    .cactus {
+        display: block;
+        max-width: 70%;
+    }
+
+    #cactusFruit0 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 0%;             /* Ajustez selon l'emplacement souhaité */
+        left: 33%;
+        transform: rotate(20deg);
+        width: 15%;
+    }
+
+    #cactusFruit1 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 12%;             /* Ajustez selon l'emplacement souhaité */
+        left: 50%;
+        transform: rotate(-20deg);
+        width: 15%;
+    }
+
+    #cactusFruit2 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 23%;             /* Ajustez selon l'emplacement souhaité */
+        left: 3%;
+        transform: rotate(-33deg);
+        width: 15%;
+    }
+
+    #cactusFruit3 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 45%;             /* Ajustez selon l'emplacement souhaité */
+        left: 21%;
+        transform: rotate(37deg);
+        width: 15%;
+    }
+
+    #cactusFruit4 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 65%;             /* Ajustez selon l'emplacement souhaité */
+        left: 39%;
+        transform: rotate(50deg);
+        width: 15%;
+    }
+
+}
