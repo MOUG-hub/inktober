@@ -82,6 +82,13 @@ function init() {
         
     }, { once: true })
 
+    curseur.addEventListener('touchend', (event) => {
+        console.log("click")
+        let curseurClick = curseur.value
+        console.log("click : ",curseurClick)
+        clicCurseur(curseurClick,cible,controller)
+    }, { once: true });
+
     // Appel de la fonction permettant le changement de l'emoji
     // en fonction de l'écart entre la valeur du curseur et la valeur Cible
     // changementEmoji(curseur, cible)
@@ -111,7 +118,6 @@ function changementEmoji(curseur, cible) {
         emoji.textContent = "😡"
     }
 
-    return toCible
 }
 
 
