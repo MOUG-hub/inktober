@@ -1,0 +1,97 @@
+input[type="range"] {
+    /* filter: grayscale(1); */
+    /* -webkit-appearance: none; */
+    writing-mode: vertical-lr;
+    direction: rtl;
+    margin: 10px;
+    accent-color: blue;
+    
+}
+
+p {
+    font-size: 3em;
+    /* line-height: 1; */
+    /* vertical-align: middle; */
+    /* display: inline-flex; */
+    text-align: center;
+    /* justify-content: center;
+    margin: auto */
+    
+}
+
+span {
+    font-size: 3em;
+    /* vertical-align: middle; */
+    /* display: inline-flex; */
+    display: flex;
+    justify-content: center;
+    /* justify-content: center;
+    margin: auto */
+    
+}
+
+button {
+    font-size: 3em;
+    color: black;
+    background-color: lightgrey ;
+    margin: 0.5em;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    /* font-size: 3em; */
+}
+
+.recommencer {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    display: none;
+}
+
+
+
+@keyframes wizzEffect {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-10px, 5px); }
+  40% { transform: translate(10px, -5px); }
+  60% { transform: translate(-10px, -5px); }
+  80% { transform: translate(10px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.wizz {
+  animation: wizzEffect 0.3s ease-in-out;
+}
+
+
+img {
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+    transform: rotate(0deg);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    display: none;
+}
+
+
+@media all and (orientation: portrait) {
+    img {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+    transform: rotate(0deg);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    display: none;
+}
+
+}
