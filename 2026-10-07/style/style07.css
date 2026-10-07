@@ -1,0 +1,423 @@
+input[type="range"] {
+    /* filter: grayscale(1); */
+    /* -webkit-appearance: none; */
+    writing-mode: vertical-lr;
+    direction: rtl;
+    margin: 10px;
+    accent-color: blue;
+    
+}
+
+p {
+    font-size: 3em;
+    /* line-height: 1; */
+    /* vertical-align: middle; */
+    /* display: inline-flex; */
+    text-align: center;
+    /* justify-content: center;
+    margin: auto */
+    
+}
+
+span {
+    font-size: 3em;
+    /* vertical-align: middle; */
+    /* display: inline-flex; */
+    display: flex;
+    justify-content: center;
+    /* justify-content: center;
+    margin: auto */
+    
+}
+
+button {
+    font-size: 3em;
+    color: black;
+    background-color: lightgrey ;
+    margin: 0.5em;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+    /* font-size: 3em; */
+}
+
+.recommencer {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    display: none;
+}
+
+.reessayer {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    display: none;
+}
+
+
+
+@keyframes wizzEffect {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-10px, 5px); }
+  40% { transform: translate(10px, -5px); }
+  60% { transform: translate(-10px, -5px); }
+  80% { transform: translate(10px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.wizz {
+  animation: wizzEffect 0.3s ease-in-out;
+}
+
+.LED {
+    width: 100%;
+    max-width: 5%;
+}
+
+
+.LEDvalides {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.enigme01 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    margin: 30px;
+}
+
+.symboleScurseurs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* max-height: 50%; */
+}
+
+.symboleScurseurs2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* max-height: 30%; */
+}
+
+.symboleCurseurs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: -20px;
+}
+
+.symboleCurseurs2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: -30px;
+}
+
+#symboleCurseurIN1, #symboleCurseurIN2, #symboleCurseur0, 
+#symboleCurseur1, #symboleCurseur2, #symboleCurseur3, #symboleCurseur4 {
+    width: 100%;
+    max-width: 20%;
+} 
+
+.valider {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+}
+
+
+.enigme02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    margin: 30px;
+}
+
+.ligneSymboles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 90%;
+}
+
+.fleche, 
+#symboleLigne0, #symboleLigne1, #symboleLigne2, #symboleLigne3, #symboleLigne4 {
+    width: 100%;
+    max-width: 5%;
+}
+
+.fullBoitier {
+    position: relative; /* Sert de repère pour l'enfant en position absolue */
+    /* display: inline-block; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#boitier {
+    width: 100%;
+    max-width: 60%;
+    display: block;
+}
+
+#symboleBoitier0, #symboleBoitier1, #symboleBoitier2 {
+    width: 100%;
+    max-width: 7%;
+}
+
+#filBoitier0, #filBoitier1, #filBoitier2 {
+    width: 100%;
+    max-width: 25%;
+}
+
+#symboleBoitier0 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 20%;             /* Ajustez selon l'emplacement souhaité */
+    left: 29%;
+}
+
+#symboleBoitier1 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 40%;             /* Ajustez selon l'emplacement souhaité */
+    left: 29%;
+}
+
+#symboleBoitier2 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 60%;             /* Ajustez selon l'emplacement souhaité */
+    left: 29%;
+}
+
+#filBoitier0 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 26%;             /* Ajustez selon l'emplacement souhaité */
+    left: 41.7%;
+}
+
+#filBoitier1 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 44%;             /* Ajustez selon l'emplacement souhaité */
+    left: 41.7%;
+}
+
+#filBoitier2 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 62.5%;             /* Ajustez selon l'emplacement souhaité */
+    left: 41.7%;
+}
+
+
+
+
+.enigme03 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    margin: 50px;
+}
+
+.LEDligne {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.LEDenigme {
+    width: 100%;
+    max-width: 7%;
+    margin: 10px;
+}
+
+/* img {
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+    transform: rotate(0deg);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    display: none;
+} */
+
+
+@media all and (orientation: portrait) {
+    .LED {
+        width: 100%;
+        max-width: 15%;
+    }
+
+
+    .enigme01 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        margin: 30px;
+        margin-top: 50px;
+        max-height: 70%;
+    }
+
+    .symboleScurseurs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* max-height: 50%; */
+    }
+
+    .symboleScurseurs2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* max-height: 30%; */
+    }
+
+    .symboleCurseurs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: -40px;
+    }
+
+    .symboleCurseurs2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: -30px;
+    }
+
+    #symboleCurseurIN1, #symboleCurseurIN2, #symboleCurseur0, 
+    #symboleCurseur1, #symboleCurseur2, #symboleCurseur3, #symboleCurseur4 {
+        width: 100%;
+        max-width: 20%;
+        /* margin: 10px; */
+    }
+
+
+    .enigme02 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        margin-top: 30px;
+    }
+
+    .ligneSymboles {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .fullBoitier {
+        position: relative; /* Sert de repère pour l'enfant en position absolue */
+        /* display: inline-block; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 130%;
+        max-width: 120%;
+
+    }
+
+    .fleche, 
+    #symboleLigne0, #symboleLigne1, #symboleLigne2, #symboleLigne3, #symboleLigne4 {
+        width: 100%;
+        max-width: 12%;
+    }
+
+    #boitier {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+
+    #symboleBoitier0, #symboleBoitier1, #symboleBoitier2 {
+        width: 100%;
+        max-width: 10%;
+    }
+
+    #filBoitier0, #filBoitier1, #filBoitier2 {
+        width: 100%;
+        max-width: 41.9%;
+    }
+
+    #symboleBoitier0 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 22%;             /* Ajustez selon l'emplacement souhaité */
+        left: 17%;
+    }
+
+    #symboleBoitier1 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 40%;             /* Ajustez selon l'emplacement souhaité */
+        left: 17%;
+    }
+
+    #symboleBoitier2 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 60%;             /* Ajustez selon l'emplacement souhaité */
+        left: 17%;
+    }
+
+    #filBoitier0 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 26%;             /* Ajustez selon l'emplacement souhaité */
+        left: 36%;
+    }
+
+    #filBoitier1 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 44%;             /* Ajustez selon l'emplacement souhaité */
+        left: 36%;
+    }
+
+    #filBoitier2 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 62.5%;             /* Ajustez selon l'emplacement souhaité */
+        left: 36%;
+    }
+
+    .LEDenigme {
+        width: 100%;
+        max-width: 23%;
+        margin: 10px;
+    }
+
+
+}
