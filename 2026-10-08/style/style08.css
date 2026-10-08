@@ -1,0 +1,196 @@
+button {
+    font-size: 3em;
+    color: black;
+    background-color: lightgrey ;
+    margin: 0.5em;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.recommencer {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    display: none;
+    z-index: 1;
+}
+
+.poubelles {
+    margin-top: -100px;
+}
+
+
+.poubellesLigne {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.blocPoubelle0, .blocPoubelle1, .blocPoubelle2, 
+.blocPoubelle3, .blocPoubelle4, .blocPoubelle5 {
+    position: relative; /* Sert de repère pour l'enfant en position absolue */
+    display: inline-block;
+}
+
+#poubelle0, #poubelle1, #poubelle2, 
+#poubelle3, #poubelle4, #poubelle5 {
+    
+    width: 100%;
+    max-width: 60%;
+    margin: 30%;
+    display: block;
+    position: relative;
+    z-index: 2;
+
+}
+
+
+.mouffette0, .mouffette1, .mouffette2,
+.mouffette3, .mouffette4, .mouffette5 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 23%;             /* Ajustez selon l'emplacement souhaité */
+    left: 55%;
+    width: 100%;
+    max-width: 60%;
+    z-index: 1;
+    display: none;
+}
+
+.pet0, .pet1, .pet2,
+.pet3, .pet4, .pet5 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 20%;             /* Ajustez selon l'emplacement souhaité */
+    left: -13%;
+    width: 100%;
+    max-width: 60%;
+    z-index: 1;
+    display: none;
+}
+
+
+
+
+.ogre {
+    width: 100%;
+    max-width: 20%;
+    /* height: auto; */
+    transform: rotate(0deg);
+}
+
+.plats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    max-width: 80%;
+
+}
+
+.smartphone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+
+.plat, .plat1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.platImage {
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+    transform: rotate(0deg);
+}
+
+@keyframes wizzEffect {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-10px, 5px); }
+  40% { transform: translate(10px, -5px); }
+  60% { transform: translate(-10px, -5px); }
+  80% { transform: translate(10px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.wizz {
+  animation: wizzEffect 0.3s ease-in-out;
+}
+
+
+/* img {
+    width: 50%;
+    max-width: 20%;
+    height: auto;
+    transform: rotate(0deg);
+} */
+
+
+@media all and (orientation: portrait) {
+    .poubelles {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: -10px;
+    }
+
+    .poubellesLigne {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+    }
+
+    .blocPoubelle0, .blocPoubelle1, .blocPoubelle2, 
+    .blocPoubelle3, .blocPoubelle4, .blocPoubelle5 {
+        position: relative; /* Sert de repère pour l'enfant en position absolue */
+        display: inline-block;
+        margin-top: -50px;
+    }
+
+    #poubelle0, #poubelle1, #poubelle2, 
+    #poubelle3, #poubelle4, #poubelle5 {
+        
+        width: 100%;
+        max-width: 45%;
+        margin: 30%;
+        display: block;
+        position: relative;
+        z-index: 2;
+
+    }
+
+
+    .mouffette0, .mouffette1, .mouffette2,
+    .mouffette3, .mouffette4, .mouffette5 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 26%;             /* Ajustez selon l'emplacement souhaité */
+        left: 50%;
+        width: 100%;
+        max-width: 45%;
+        z-index: 1;
+        display: none;
+    }
+
+    .pet0, .pet1, .pet2,
+    .pet3, .pet4, .pet5 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 20%;             /* Ajustez selon l'emplacement souhaité */
+        left: -2%;
+        width: 100%;
+        max-width: 45%;
+        z-index: 1;
+        display: none;
+    }
+}

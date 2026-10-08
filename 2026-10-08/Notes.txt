@@ -1,0 +1,4 @@
+Faire 2 images "tête ogre" : bouche ouverte, bouche fermée
+Faire 5 imges "plats"
+Faire image "OGRE FAIM"
+faire image "OGRE PU FAIM"
