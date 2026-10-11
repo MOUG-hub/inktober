@@ -1,0 +1,257 @@
+button {
+    font-size: 3em;
+    color: black;
+    background-color: lightgrey ;
+    margin: 0.5em;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.valider {
+    display: flex;
+    font-size: 1em;
+    /* display: none; */
+    z-index: 1;
+    margin-top: 40%;
+}
+
+.nbErreur {
+    display: flex;
+    font-size: 4em;
+    display: none;
+    z-index: 1;
+}
+
+.recommencer {
+    display: flex;
+    font-size: 1em;
+    display: none;
+    z-index: 1;
+    margin-top: 40%;
+}
+
+
+.ligneIndications {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.livre {
+    width: 100%;
+    max-width: 10%;
+}
+
+.roseDesVents {
+    width: 100%;
+    max-width: 10%;
+}
+
+.lune {
+    width: 100%;
+    max-width: 10%;
+}
+
+.fullRituel {
+    position: relative; /* Sert de repère pour l'enfant en position absolue */
+    display: inline-block;
+}
+
+.cercle {    
+    width: 100%;
+    max-width: 55%;
+    /* margin: 22.5%; */
+    margin: auto;
+    margin-top: 5%;
+    display: block;
+    position: relative;
+    /* z-index: 2; */
+
+}
+
+
+#bougie0, .flamme0 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 0%;             /* Ajustez selon l'emplacement souhaité */
+    left: 48.5%;
+    width: 100%;
+    max-width: 4.5%;
+    /* z-index: 1; */
+    /* display: none; */
+}
+
+#bougie3, .flamme3 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 37.5%;             /* Ajustez selon l'emplacement souhaité */
+    left: 25.2%;
+    width: 100%;
+    max-width: 4.5%;
+    /* z-index: 1; */
+    /* display: none; */
+}
+
+#bougie1, .flamme1 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 37.5%;             /* Ajustez selon l'emplacement souhaité */
+    left: 70.5%;
+    width: 100%;
+    max-width: 4.5%;
+    /* z-index: 1; */
+    /* display: none; */
+}
+
+#bougie2, .flamme2 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 76.5%;             /* Ajustez selon l'emplacement souhaité */
+    left: 47.9%;
+    width: 100%;
+    max-width: 4.5%;
+    /* z-index: 1; */
+    /* display: none; */
+}
+
+.flamme0, .flamme1, .flamme2, .flamme3 {
+    display: none;
+}
+
+
+
+.pages {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 0%;             /* Ajustez selon l'emplacement souhaité */
+    left: -20%;
+    width: 100%;
+    max-width: 40%;
+    display: none;
+}
+
+.resultat {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 32.5%;             /* Ajustez selon l'emplacement souhaité */
+    left: 37.5%;
+    width: 100%;
+    max-width: 25%;
+    display: none;
+}
+
+
+
+
+
+@keyframes wizzEffect {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-10px, 5px); }
+  40% { transform: translate(10px, -5px); }
+  60% { transform: translate(-10px, -5px); }
+  80% { transform: translate(10px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.wizz {
+  animation: wizzEffect 0.3s ease-in-out;
+}
+
+
+/* img {
+    width: 50%;
+    max-width: 20%;
+    height: auto;
+    transform: rotate(0deg);
+} */
+
+
+@media all and (orientation: portrait) {
+
+
+    .livre, .roseDesVents, .lune {
+        width: 100%;
+        max-width: 25%;
+        margin-top: -5%;
+    }
+
+
+    .cercle {    
+        width: 100%;
+        max-width: 90%;
+        /* margin: 22.5%; */
+        margin: auto;
+        margin-top: 5%;
+        display: block;
+        position: relative;
+        /* z-index: 2; */
+
+    }
+
+
+    #bougie0, .flamme0 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: -2%;             /* Ajustez selon l'emplacement souhaité */
+        left: 46.5%;
+        width: 100%;
+        max-width: 7%;
+        /* z-index: 1; */
+        /* display: none; */
+    }
+
+    #bougie3, .flamme3 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 37.5%;             /* Ajustez selon l'emplacement souhaité */
+        left: 9.4%;
+        width: 100%;
+        max-width: 7%;
+        /* z-index: 1; */
+        /* display: none; */
+    }
+
+    #bougie1, .flamme1 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 37.5%;             /* Ajustez selon l'emplacement souhaité */
+        left: 83.5%;
+        width: 100%;
+        max-width: 7%;
+        /* z-index: 1; */
+        /* display: none; */
+    }
+
+    #bougie2, .flamme2 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 75.5%;             /* Ajustez selon l'emplacement souhaité */
+        left: 47.9%;
+        width: 100%;
+        max-width: 7%;
+        /* z-index: 1; */
+        /* display: none; */
+    }
+
+    .flamme0, .flamme1, .flamme2, .flamme3 {
+        display: none;
+    }
+
+
+
+    .pages {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 0%;             /* Ajustez selon l'emplacement souhaité */
+        left: 10%;
+        width: 100%;
+        max-width: 80%;
+        display: none;
+    }
+
+    .resultat {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 36.5%;             /* Ajustez selon l'emplacement souhaité */
+        left: 35%;
+        width: 100%;
+        max-width: 30%;
+        display: none;
+    }
+
+}
