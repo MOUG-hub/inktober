@@ -22,8 +22,9 @@ let time = 1000
 
 let bouee = 0
 
+let siSmartphone = window.matchMedia("(orientation: portrait)")
 
-// requestAnimationFrame(flameche)
+
 initClicks()
 init()
 
@@ -54,6 +55,7 @@ function deplacementSauvetage(clickOrdonne,clickAbscisse) {
         }
     }
 
+    // console.log("siSmartphone : ",siSmartphone.matches)
 
     sauvetageAbscisse += cycleSauvetageAbscisse[cycleSauvetage]
     if ((sauvetageOrdonne == 0) || (sauvetageOrdonne == 6)) {
@@ -63,6 +65,12 @@ function deplacementSauvetage(clickOrdonne,clickAbscisse) {
             sauvetageAbscisse = 2
         }
     } else if ((sauvetageOrdonne == 1) || (sauvetageOrdonne == 5)) {
+        if (sauvetageAbscisse < 1) {
+            sauvetageAbscisse = 5
+        } else if (sauvetageAbscisse > 5) {
+            sauvetageAbscisse = 1
+        }
+    } else if (siSmartphone.matches) {
         if (sauvetageAbscisse < 1) {
             sauvetageAbscisse = 5
         } else if (sauvetageAbscisse > 5) {
@@ -143,10 +151,10 @@ function deplacementSauvetage(clickOrdonne,clickAbscisse) {
             }
         }, time);
     } else {
-        console.log("clickOrdonne : ",clickOrdonne)
-        console.log("oldSauvetageOrdonne : ",oldSauvetageOrdonne)
-        console.log("clickAbscisse : ",clickAbscisse)
-        console.log("oldSauvetageAbscisse : ",oldSauvetageAbscisse)
+        // console.log("clickOrdonne : ",clickOrdonne)
+        // console.log("oldSauvetageOrdonne : ",oldSauvetageOrdonne)
+        // console.log("clickAbscisse : ",clickAbscisse)
+        // console.log("oldSauvetageAbscisse : ",oldSauvetageAbscisse)
 
 
         if ((clickOrdonne == sauvetageOrdonne) && (clickAbscisse == sauvetageAbscisse)) {
@@ -209,7 +217,7 @@ function clicSauvetage(clickOrdonne,clickAbscisse) {
     }
 
     sauvetageImage.src = "images/Mer4.webp"
-    console.log("sauvetageImage.src : ",sauvetageImage.src)
+    // console.log("sauvetageImage.src : ",sauvetageImage.src)
     bouee = 1
     deplacementSauvetage(clickOrdonne,clickAbscisse)
 
@@ -261,7 +269,7 @@ function initClicks() {
         let merImage = document.querySelector(`#mer${j}`)        
 
         merImage.addEventListener("click", (event) => {
-            console.log("click mer : ",merImage.id)
+            // console.log("click mer : ",merImage.id)
 
             if (j < 3) {
                 ordonne = 0
@@ -288,7 +296,7 @@ function initClicks() {
             merOrdonne[j] = ordonne
             merAbscisse[j] = abscisse
 
-            console.log("Ordonnée : ",merOrdonne[j]," ; Abscisse : ",merAbscisse[j])
+            // console.log("Ordonnée : ",merOrdonne[j]," ; Abscisse : ",merAbscisse[j])
 
             clicSauvetage(merOrdonne[j],merAbscisse[j])
         })
@@ -296,72 +304,7 @@ function initClicks() {
 
 }
 
-function apparitionDisparitionBelier(position,apparition) {
-    let belierImage = document.querySelector(`.belier${position}`)
-    let boucheImage = document.querySelector(`#bouche${position}`)
-    let oeilGaucheImage = document.querySelector(`#oeilGauche${position}`)
-    let oeilDroitImage = document.querySelector(`#oeilDroit${position}`)
-    let corneGaucheImage = document.querySelector(`#corneGauche${position}`)
-    let corneDroiteImage = document.querySelector(`#corneDroite${position}`)
 
-    // console.log(belierImage)
-    // console.log(boucheImage)
-    // console.log(oeilGaucheImage)
-    // console.log(oeilDroitImage)
-    // console.log(corneGaucheImage)
-    // console.log(corneDroiteImage)
-
-    if (apparition == 0) {
-        belierImage.style.display = "none"
-        boucheImage.style.display = "none"
-        oeilGaucheImage.style.display = "none"
-        oeilDroitImage.style.display = "none"
-        corneGaucheImage.style.display = "none"
-        corneDroiteImage.style.display = "none"
-    } else {
-        belierImage.style.display = ""
-        boucheImage.style.display = ""
-        oeilGaucheImage.style.display = ""
-        oeilDroitImage.style.display = ""
-        corneGaucheImage.style.display = ""
-        corneDroiteImage.style.display = ""
-    }
-}
-
-function belierGauche() {
-    let boucheImage = document.querySelector("#boucheG")
-    let oeilGaucheImage = document.querySelector("#oeilGaucheG")
-    let oeilDroitImage = document.querySelector("#oeilDroitG")
-    let corneGaucheImage = document.querySelector("#corneGaucheG")
-    let corneDroiteImage = document.querySelector("#corneDroiteG")
-
-    let randomIndex = Math.floor(Math.random() * 2)
-    boucheImage.src = cycleBouche[randomIndex]
-    boucheBelierG = randomIndex
-
-    randomIndex = Math.floor(Math.random() * 5)
-    oeilGaucheImage.src = cycleOeilGauche[randomIndex]
-    oeilGaucheBelierG = randomIndex
-
-    randomIndex = Math.floor(Math.random() * 5)
-    oeilDroitImage.src = cycleOeilDroit[randomIndex]
-    oeilDroitBelierG = randomIndex
-
-    randomIndex = Math.floor(Math.random() * 3)
-    corneGaucheImage.src = cycleCorneGauche[randomIndex]
-    corneGaucheBelierG = randomIndex
-
-    randomIndex = Math.floor(Math.random() * 3)
-    corneDroiteImage.src = cycleCorneDroite[randomIndex]
-    corneDroiteBelierG = randomIndex
-
-    // console.log(boucheBelierG)
-    // console.log(oeilGaucheBelierG)
-    // console.log(oeilDroitBelierG)
-    // console.log(corneGaucheBelierG)
-    // console.log(corneDroiteBelierD)
-
-}
 
 function flameche(currentTime) {
     
