@@ -1,0 +1,129 @@
+button {
+    font-size: 3em;
+    color: black;
+    background-color: lightgrey ;
+    margin: 0.5em;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.valider {
+    display: flex;
+    font-size: 1em;
+    display: none;
+    z-index: 1;
+    margin-top: 40%;
+}
+
+.nbErreur {
+    display: flex;
+    font-size: 4em;
+    display: none;
+    z-index: 1;
+}
+
+.recommencer {
+    display: flex;
+    font-size: 1em;
+    display: none;
+    z-index: 1;
+    margin-top: 40%;
+}
+
+
+.ligneBoue {
+    position: relative; /* Sert de repère pour l'enfant en position absolue */
+    display: inline-block;
+}
+
+.support, .bouee {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 0%;             /* Ajustez selon l'emplacement souhaité */
+    left: 48.5%;
+    width: 100%;
+    max-width: 4.5%;
+    /* z-index: 1; */
+    /* display: none; */
+}
+
+.fullRituel {
+    position: relative; /* Sert de repère pour l'enfant en position absolue */
+    display: inline-block;
+}
+
+.lignesMer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 97%;
+}
+
+.cercle {    
+    width: 100%;
+    max-width: 55%;
+    /* margin: 22.5%; */
+    margin: auto;
+    margin-top: 5%;
+    display: block;
+    position: relative;
+    /* z-index: 2; */
+
+}
+
+.ligne0, .ligne1, .ligne2, .ligne3, .ligne4, .ligne5, .ligne6 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.carre {
+    width: 100%;
+    max-width: 5em;
+    margin: 0.5em;
+}
+
+
+
+
+
+
+
+@keyframes wizzEffect {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-10px, 5px); }
+  40% { transform: translate(10px, -5px); }
+  60% { transform: translate(-10px, -5px); }
+  80% { transform: translate(10px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.wizz {
+  animation: wizzEffect 0.3s ease-in-out;
+}
+
+
+/* img {
+    width: 50%;
+    max-width: 20%;
+    height: auto;
+    transform: rotate(0deg);
+} */
+
+
+@media all and (orientation: portrait) {
+    .carre {
+    width: 100%;
+    max-width: 3em;
+    margin: 0.7em;
+}
+
+}
