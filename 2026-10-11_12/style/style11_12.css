@@ -121,9 +121,14 @@ button {
 
 @media all and (orientation: portrait) {
     .carre {
-    width: 100%;
-    max-width: 3em;
-    margin: 0.7em;
-}
+        width: 100%;
+        max-width: 3em;
+        margin: 0.7em;
+    }
+
+    #mer8, #mer14, #mer15,
+    #mer21, #mer22, #mer28 {
+        display: none;
+    }
 
 }
