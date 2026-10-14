@@ -1,0 +1,283 @@
+button {
+    font-size: 3em;
+    color: black;
+    background-color: lightgrey ;
+    margin: 0.5em;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.valider {
+    display: flex;
+    font-size: 1em;
+    display: none;
+    z-index: 1;
+    margin-top: 40%;
+}
+
+.nbErreur {
+    display: flex;
+    font-size: 4em;
+    display: none;
+    z-index: 1;
+}
+
+.recommencer {
+    display: flex;
+    font-size: 1em;
+    display: none;
+    z-index: 1;
+    margin-top: 40%;
+}
+
+
+.ligneVase {
+    position: relative; /* Sert de repère pour l'enfant en position absolue */
+    display: inline-block;
+}
+
+
+
+.vaseFull {
+    width: 100%;
+    max-width: 55%;
+    /* margin: 22.5%; */
+    margin: auto;
+    margin-top: -5%;
+    display: block;
+    position: relative;
+    /* z-index: 2; */
+    
+}
+
+.vaseHalo {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 5.7%;             /* Ajustez selon l'emplacement souhaité */
+    left: 22.5%;
+    width: 100%;
+    max-width: 55%;
+    /* z-index: 1; */
+    display: none;
+}
+
+.ligneDamier {
+    position: relative; /* Sert de repère pour l'enfant en position absolue */
+    display: inline-block;
+}
+
+#damier {
+    width: 100%;
+    max-width: 60%;
+    /* margin: 22.5%; */
+    margin: auto;
+    margin-top: -5%;
+    display: block;
+    position: relative;
+    /* z-index: 2; */
+}
+
+.dames {
+    width: 100%;
+    max-width: 11.5%;
+    cursor: pointer;
+}
+
+.coll0 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    left: 21.425%;
+    
+}
+
+.coll1 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    left: 32.825%;
+    
+}
+
+.coll2 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    left: 44.25%;
+    
+}
+
+.coll3 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    left: 55.65%;
+    
+}
+
+.coll4 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    left: 67.05%;
+
+}
+
+
+.ligne0 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: -7%;             /* Ajustez selon l'emplacement souhaité */
+    
+}
+
+.ligne1 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 14%;             /* Ajustez selon l'emplacement souhaité */
+    
+}
+
+.ligne2 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 35%;             /* Ajustez selon l'emplacement souhaité */
+    
+}
+
+.ligne3 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 56%;             /* Ajustez selon l'emplacement souhaité */
+    
+}
+
+.ligne4 {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 77%;             /* Ajustez selon l'emplacement souhaité */
+    
+}
+
+
+
+@keyframes wizzEffect {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-10px, 5px); }
+  40% { transform: translate(10px, -5px); }
+  60% { transform: translate(-10px, -5px); }
+  80% { transform: translate(10px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.wizz {
+  animation: wizzEffect 0.3s ease-in-out;
+}
+
+
+/* img {
+    width: 50%;
+    max-width: 20%;
+    height: auto;
+    transform: rotate(0deg);
+} */
+
+
+@media all and (orientation: portrait) {
+    .vaseFull {
+        width: 100%;
+        max-width: 40%;
+        /* margin: 22.5%; */
+        margin: auto;
+        margin-top: -5%;
+        display: block;
+        position: relative;
+        /* z-index: 2; */
+        
+    }
+
+    .vaseHalo {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: -8.8%;             /* Ajustez selon l'emplacement souhaité */
+        left: 30%;
+        width: 100%;
+        max-width: 40%;
+        /* z-index: 1; */
+        /* display: none; */
+        /* display: flex; */
+    }
+
+    .ligneDamier {
+        position: relative; /* Sert de repère pour l'enfant en position absolue */
+        display: inline-block;
+    }
+
+    #damier {
+        width: 100%;
+        max-width: 95%;
+        /* margin: 22.5%; */
+        margin: auto;
+        margin-top: -5%;
+        display: block;
+        position: relative;
+        /* z-index: 2; */
+    }
+
+    .dames {
+        width: 100%;
+        max-width: 19%;
+        cursor: pointer;
+    }
+
+    .coll0 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        left: 4.3%;
+        
+    }
+
+    .coll1 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        left: 22.4%;
+        
+    }
+
+    .coll2 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        left: 40.5%;
+        
+    }
+
+    .coll3 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        left: 58.5%;
+        
+    }
+
+    .coll4 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        left: 76.7%;
+
+    }
+
+
+    .ligne0 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: -4%;             /* Ajustez selon l'emplacement souhaité */
+        
+    }
+
+    .ligne1 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 16%;             /* Ajustez selon l'emplacement souhaité */
+        
+    }
+
+    .ligne2 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 36.5%;             /* Ajustez selon l'emplacement souhaité */
+        
+    }
+
+    .ligne3 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 56.5%;             /* Ajustez selon l'emplacement souhaité */
+        
+    }
+
+    .ligne4 {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 77%;             /* Ajustez selon l'emplacement souhaité */
+        
+    }
+
+}
