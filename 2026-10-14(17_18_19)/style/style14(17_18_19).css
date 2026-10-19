@@ -1,0 +1,208 @@
+button {
+    font-size: 3em;
+    color: black;
+    background-color: lightgrey ;
+    margin: 0.5em;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.valider {
+    display: flex;
+    font-size: 1em;
+    display: none;
+    z-index: 1;
+    margin-top: 40%;
+}
+
+.nbErreur {
+    display: flex;
+    font-size: 4em;
+    display: none;
+    z-index: 1;
+}
+
+.recommencer {
+    display: flex;
+    font-size: 1em;
+    display: none;
+    z-index: 1;
+    margin-top: 2%;
+}
+
+
+.ligneSorciere {
+    position: relative; /* Sert de repère pour l'enfant en position absolue */
+    display: inline-block;
+    margin-top: -1%;
+}
+
+.vide {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 35%;
+    margin: auto;
+}
+
+.sorciere, .chapeau {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 0%;             /* Ajustez selon l'emplacement souhaité */
+    left: 33%;
+    width: 100%;
+    max-width: 35%;
+    /* z-index: 1; */
+    /* display: none; */
+}
+
+
+
+.oeilGauche, .oeilDroit {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 57%;             /* Ajustez selon l'emplacement souhaité */
+    left: 45%;
+    width: 100%;
+    max-width: 5.3%;
+    display: none;
+}
+
+.oeilDroit {
+    transform: scaleX(-1);
+    left: 50%;
+    transform: rotate(180deg);
+}
+
+.lignesChemin {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    max-width: 70%;
+}
+
+.cases {
+    width: 100%;
+    max-width: 10%;
+}
+
+.ligne0, .ligne1, .ligne2, .ligne3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 4%;
+}
+
+
+
+.blocGaucheDroite {
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+
+.btnGauche, .btnDroit {
+    color: black;
+    background-color: lightgrey ;
+}
+
+
+
+
+
+
+
+@keyframes wizzEffect {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-10px, 5px); }
+  40% { transform: translate(10px, -5px); }
+  60% { transform: translate(-10px, -5px); }
+  80% { transform: translate(10px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.wizz {
+  animation: wizzEffect 0.3s ease-in-out;
+}
+
+
+@media all and (orientation: portrait) {
+    .ligneSorciere {
+        position: relative; /* Sert de repère pour l'enfant en position absolue */
+        display: inline-block;
+        
+    }
+
+    .vide {
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: 35%;
+        margin: auto;
+    }
+
+    .sorciere, .chapeau {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 0%;             /* Ajustez selon l'emplacement souhaité */
+        left: 33%;
+        width: 100%;
+        max-width: 35%;
+        /* z-index: 1; */
+        /* display: none; */
+    }
+
+
+
+    .oeilGauche, .oeilDroit {
+        position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+        top: 57%;             /* Ajustez selon l'emplacement souhaité */
+        left: 45%;
+        width: 100%;
+        max-width: 5.3%;
+        display: none;
+    }
+
+    .oeilDroit {
+        transform: scaleX(-1);
+        left: 50%;
+        transform: rotate(180deg);
+    }
+
+    .lignesChemin {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: center; */
+        max-width: 70%;
+    }
+
+    .cases {
+        width: 100%;
+        max-width: 30%;
+    }
+
+    .ligne0, .ligne1, .ligne2, .ligne3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+
+
+
+    .blocGaucheDroite {
+        display: flex;
+        justify-content: center;
+    }
+
+}
