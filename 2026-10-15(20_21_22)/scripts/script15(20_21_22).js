@@ -8,9 +8,9 @@ let cible = []
 let valeurEcartCurseur = []
 
 
-
-init()
 initClicks()
+init()
+
 // animationSquelette()
 
 
@@ -102,9 +102,9 @@ function finEnigme(controller) {
     TVImage.src = "images/TV1.webp"
 
     TVImage.addEventListener("click", (event) => {
-        
-        init()
         initClicks()
+        init()
+        
 
         // console.log("Ordonnée : ",merOrdonne[j]," ; Abscisse : ",merAbscisse[j])
 
