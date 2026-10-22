@@ -1,0 +1,171 @@
+button {
+    font-size: 3em;
+    color: black;
+    background-color: lightgrey ;
+    margin: 0.5em;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.valider {
+    display: flex;
+    font-size: 1em;
+    display: none;
+    z-index: 1;
+    margin-top: 40%;
+}
+
+.nbErreur {
+    display: flex;
+    font-size: 4em;
+    display: none;
+    z-index: 1;
+}
+
+.recommencer {
+    display: flex;
+    font-size: 1em;
+    display: none;
+    z-index: 1;
+    margin-top: 2%;
+}
+
+
+.ligneTV {
+    position: relative; /* Sert de repère pour l'enfant en position absolue */
+    display: inline-block;
+    margin-top: -1%;
+}
+
+.TV {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 35%;
+    margin: auto;
+}
+
+.ligneCommande {
+    position: relative; /* Sert de repère pour l'enfant en position absolue */
+    display: inline-block;
+    margin-top: 0%;
+}
+
+#commandeFond {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 60%;
+    margin: auto;
+}
+
+
+
+#power {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 0%;             /* Ajustez selon l'emplacement souhaité */
+    left: 21%;
+    width: 100%;
+    max-width: 60%;
+    z-index: 1;
+    /* display: none; */
+    display: block;
+}
+
+.text {
+    position: absolute; /* Sort du flux normal pour se placer par rapport au conteneur */
+    top: 18%;             /* Ajustez selon l'emplacement souhaité */
+    font-size: 3em;
+    color: red;
+    z-index: 3;
+    display: block;
+}
+
+#text0 {
+    left: 27.8%;
+}
+
+#text1 {
+    left: 45.7%;
+}
+
+#text2 {
+    left: 63.5%;
+}
+
+
+
+input[type="range"] {
+    position: absolute;
+    top: 35%;             /* Ajustez selon l'emplacement souhaité */
+    width: 10%;
+    max-width: 100%;
+    /* filter: grayscale(1); */
+    /* -webkit-appearance: none; */
+    writing-mode: vertical-lr;
+    direction: rtl;
+    margin: 10px;
+    accent-color: rgb(255, 94, 0);
+    z-index: 2;
+}
+
+#curseur0 {
+    left: 25%;
+}
+
+#curseur1 {
+    left: 43%;
+}
+
+#curseur2 {
+    left: 61%;
+}
+
+*:disabled {
+  background-color: rgb(255, 94, 0);
+  color: rgb(255, 94, 0);
+  opacity: 0.7;
+}
+
+
+
+@keyframes wizzEffect {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-10px, 5px); }
+  40% { transform: translate(10px, -5px); }
+  60% { transform: translate(-10px, -5px); }
+  80% { transform: translate(10px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.wizz {
+  animation: wizzEffect 0.3s ease-in-out;
+}
+
+
+@media all and (orientation: portrait) {
+    .text {
+        top: 15%;             /* Ajustez selon l'emplacement souhaité */
+    }
+
+    input[type="range"] {
+        top: 50%;             /* Ajustez selon l'emplacement souhaité */
+    }
+
+    .TV {
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: 60%;
+        margin: auto;
+    }
+    
+}
+
+
