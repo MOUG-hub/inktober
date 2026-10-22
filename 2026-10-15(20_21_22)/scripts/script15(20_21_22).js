@@ -121,6 +121,10 @@ function init() {
     TVImage.src = "images/TV0.webp"
 
     listVerif = [1,1,1]
+
+    for (let j = 0; j < 3; j++) {
+        curseur[j].disabled = false
+    }
     
 }  
 
