@@ -180,10 +180,11 @@ function initClicks() {
             
         }, {signal: controller.signal})
 
-        // curseur.addEventListener('touchend', (event) => {
-            
+        
+        curseur.addEventListener('touchend', (event) => {
+            ecartCurseurs()
 
-        // }, {signal: controller.signal});
+        }, {signal: controller.signal});
 
     }
 
