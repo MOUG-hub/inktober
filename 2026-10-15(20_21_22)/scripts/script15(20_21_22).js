@@ -45,21 +45,21 @@ function clicCurseur(curseurSelect,cibleSelect) {
 }
 
 function ecartCurseurs() {  
-    console.log("valeur curseur 0 :",curseur[0].value)
-    console.log("valeur curseur 1 :",curseur[1].value)
-    console.log("valeur curseur 2 :",curseur[2].value)
+    // console.log("valeur curseur 0 :",curseur[0].value)
+    // console.log("valeur curseur 1 :",curseur[1].value)
+    // console.log("valeur curseur 2 :",curseur[2].value)
 
     valeurEcartCurseur[0] = curseur[0].value - curseur[1].value
     valeurEcartCurseur[1] = curseur[1].value - curseur[2].value
     valeurEcartCurseur[2] = curseur[2].value - curseur[0].value
 
-    console.log("écart 0>1 : ",valeurEcartCurseur[0])
-    console.log("Math.abs() écart 0>1 : ",Math.abs(valeurEcartCurseur[0]))
-    console.log("écart 1>2 : ",valeurEcartCurseur[1])
+    // console.log("écart 0>1 : ",valeurEcartCurseur[0])
+    // console.log("Math.abs() écart 0>1 : ",Math.abs(valeurEcartCurseur[0]))
+    // console.log("écart 1>2 : ",valeurEcartCurseur[1])
 
-    console.log("listVerif[0] : ",listVerif[0])
-    console.log("listVerif[1] : ",listVerif[1])
-    console.log("listVerif[2] : ",listVerif[2])
+    // console.log("listVerif[0] : ",listVerif[0])
+    // console.log("listVerif[1] : ",listVerif[1])
+    // console.log("listVerif[2] : ",listVerif[2])
 
 }
 
@@ -130,7 +130,7 @@ function initClicks() {
     let powerBtn = document.getElementById("power")
 
     powerBtn.addEventListener("click", (event) => {
-        console.log("click Power")
+        // console.log("click Power")
         verifCurseurs(controller)
         
     }, {signal: controller.signal})
@@ -139,25 +139,25 @@ function initClicks() {
         curseur[j] = document.getElementById(`curseur${j}`)
 
         let alea = Math.round(Math.random()*100)
-        console.log(`Curseur${j}.alea : `,alea)
+        // console.log(`Curseur${j}.alea : `,alea)
 
         // while ((alea > (cible - 5)) && (alea < (cible + 5))) {
         //     let alea = Math.round(Math.random()*100)
         // }
 
         curseur[j].value = alea
-        console.log(`Curseur${j}.value : `,curseur[j].value)
+        // console.log(`Curseur${j}.value : `,curseur[j].value)
 
         cible[j] = Math.round(Math.random()*100)
     
 
         curseur[j].addEventListener("input", () => {
             let curseurClick = curseur[j].id
-            console.log("click : ",curseurClick)
+            // console.log("click : ",curseurClick)
             
-            console.log("cible : ",cible[j])
+            // console.log("cible : ",cible[j])
             let curseurValue = curseur[j].value
-            console.log("click : ",curseurClick)
+            // console.log("click : ",curseurClick)
             clicCurseur(curseur[j],cible[j])
 
 
@@ -165,7 +165,7 @@ function initClicks() {
             
         }, {signal: controller.signal})
 
-        console.log(`Curseur${j}.value : `,curseur[j].value)
+        // console.log(`Curseur${j}.value : `,curseur[j].value)
 
 
         let text = document.querySelector(`#text${j}`)
@@ -174,13 +174,12 @@ function initClicks() {
 
 
         curseur[j].addEventListener("click", (event) => {
-            console.log("curseur laché")
+            // console.log("curseur laché")
             
             ecartCurseurs()
             
         }, {signal: controller.signal})
 
-        
         curseur.addEventListener('touchend', (event) => {
             ecartCurseurs()
 
