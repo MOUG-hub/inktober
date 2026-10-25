@@ -110,21 +110,11 @@ button {
 
 
 @media all and (orientation: portrait) {
-    .text {
-        top: 15%;             /* Ajustez selon l'emplacement souhaité */
-        font-size: 2em;
-    }
-
-    input[type="range"] {
-        top: 50%;             /* Ajustez selon l'emplacement souhaité */
-    }
-
-    .TV {
-        display: block;
-        position: relative;
-        width: 100%;
-        max-width: 60%;
-        margin: auto;
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 65px);
+        grid-auto-rows: 65px;
+        
     }
     
 }
