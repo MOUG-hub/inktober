@@ -239,7 +239,7 @@ function animationMoustache() {
     rotation += 30
     moustacheImage.style.transform = `rotate(${rotation}deg)`
 
-    size -= 5
+    size -= 8
     moustacheImage.style.width = `${size}%`
 
     if (stopAnim == 0) {
