@@ -168,18 +168,14 @@ function init() {
         stopAnim = 0
     }, 500);    
 
-    rotation = 0
-    size = 100
-
     setTimeout(() => {  
-        rotation = 0      
+        rotation = 0
+        size = 100   
         let billetImage = document.getElementById(`billet`)
         billetImage.style.transform = `rotate(${rotation}deg)`
-    }, 100);
- 
-
-    moustacheImage.style.transform = `rotate(${rotation}deg)`
-    moustacheImage.style.width = `${size}%`  
+        moustacheImage.style.transform = `rotate(${rotation}deg)`
+        moustacheImage.style.width = `${size}%` 
+    }, 100);  
 
 
     choixBonneCase()
