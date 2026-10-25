@@ -108,7 +108,7 @@ function mauvaiseFin(controller) {
 
     setTimeout(() => {  
         // console.log("stopAnim")
-        stopAnim = 1
+        // stopAnim = 1
         // console.log("FIN")
         finEnigme()
     }, 2500);
@@ -235,7 +235,7 @@ function animationMoustache() {
     rotation += 30
     moustacheImage.style.transform = `rotate(${rotation}deg)`
 
-    size -= 8
+    size -= 5
     moustacheImage.style.width = `${size}%`
 
     if (stopAnim == 0) {
