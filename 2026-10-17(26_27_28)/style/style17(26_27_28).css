@@ -1,0 +1,124 @@
+button {
+    font-size: 3em;
+    color: black;
+    background-color: lightgrey ;
+    margin: 0.5em;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.valider {
+    display: flex;
+    font-size: 1em;
+    display: none;
+    z-index: 1;
+    margin-top: 40%;
+}
+
+.nbErreur {
+    display: flex;
+    font-size: 4em;
+    display: none;
+    z-index: 1;
+}
+
+.recommencer {
+    display: flex;
+    font-size: 1em;
+    display: none;
+    z-index: 1;
+    margin-top: 20%;
+}
+
+.ligneImages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.ZIP, .dollar, .trophe {
+    filter: saturate(10%);
+    width: 10%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-auto-rows: 100px;
+    gap: 20px;
+    place-items: center;
+    
+    /* max-width: 50%;
+    max-height: 90%; */
+}
+
+
+.cases {
+    width: 100px;           /* Largeur de la boîte */
+    height: 100px;          /* Hauteur de la boîte */
+    /* background-color: #3498db; Couleur de fond */
+    border: 2px solid #9b0081; /* Bordure (épaisseur, style, couleur) */
+    /* padding: 20px;          Espace interne autour du texte */
+    margin: 3px;           /* Espace externe autour de la boîte */
+    border-radius: 8px;     /* Arrondi des angles */
+    /* width: 100%; */
+}
+
+.imageZIP {
+    border: 2px solid #0a009b; /* Bordure (épaisseur, style, couleur) */
+}
+
+.imageDollar {
+    border: 2px solid #007a14; /* Bordure (épaisseur, style, couleur) */
+}
+
+.imageTrophe {
+    border: 2px solid #cfbb00; /* Bordure (épaisseur, style, couleur) */
+}
+
+.imageFaux {
+    border: 2px solid #cf0000; /* Bordure (épaisseur, style, couleur) */
+}
+
+
+@keyframes wizzEffect {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-10px, 5px); }
+  40% { transform: translate(10px, -5px); }
+  60% { transform: translate(-10px, -5px); }
+  80% { transform: translate(10px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.wizz {
+  animation: wizzEffect 0.3s ease-in-out;
+}
+
+
+@media all and (orientation: portrait) {
+    .ZIP, .dollar, .trophe {
+        filter: saturate(10%);
+        width: 20%;
+    }
+
+    .cases {
+        width: 90px;           /* Largeur de la boîte */
+        height: 90px;          /* Hauteur de la boîte */
+        /* background-color: #3498db; Couleur de fond */
+        border: 2px solid #9b0081; /* Bordure (épaisseur, style, couleur) */
+        /* padding: 20px;          Espace interne autour du texte */
+        margin: 3px;           /* Espace externe autour de la boîte */
+        border-radius: 8px;     /* Arrondi des angles */
+        /* width: 100%; */
+    }
+
+
+}
